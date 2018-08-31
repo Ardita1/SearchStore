@@ -12,6 +12,11 @@
 		1B709F462135766E00E958EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B709F442135766E00E958EB /* Main.storyboard */; };
 		1B709F482135766F00E958EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B709F472135766F00E958EB /* Assets.xcassets */; };
 		1B709F4B2135766F00E958EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B709F492135766F00E958EB /* LaunchScreen.storyboard */; };
+		E7740D46213593AB00A23B9D /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7740D45213593AB00A23B9D /* SearchResults.swift */; };
+		E7740D4A2135A53200A23B9D /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7740D492135A53200A23B9D /* SearchResultCell.swift */; };
+		E775FB6D2136933900DCA9E7 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7740D4721359E6D00A23B9D /* SearchResultCell.xib */; };
+		E775FB712136A61000DCA9E7 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E775FB702136A61000DCA9E7 /* NothingFoundCell.xib */; };
+		E7AA08C721383347009605E9 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AA08C621383347009605E9 /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1B709F472135766F00E958EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B709F4A2135766F00E958EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B709F4C2135766F00E958EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7740D45213593AB00A23B9D /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		E7740D4721359E6D00A23B9D /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		E7740D492135A53200A23B9D /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		E775FB702136A61000DCA9E7 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		E7AA08C621383347009605E9 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				1B709F472135766F00E958EB /* Assets.xcassets */,
 				1B709F492135766F00E958EB /* LaunchScreen.storyboard */,
 				1B709F4C2135766F00E958EB /* Info.plist */,
+				E7740D45213593AB00A23B9D /* SearchResults.swift */,
+				E7740D4721359E6D00A23B9D /* SearchResultCell.xib */,
+				E7740D492135A53200A23B9D /* SearchResultCell.swift */,
+				E775FB702136A61000DCA9E7 /* NothingFoundCell.xib */,
+				E7AA08C621383347009605E9 /* LoadingCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -122,8 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E775FB6D2136933900DCA9E7 /* SearchResultCell.xib in Resources */,
 				1B709F4B2135766F00E958EB /* LaunchScreen.storyboard in Resources */,
+				E7AA08C721383347009605E9 /* LoadingCell.xib in Resources */,
 				1B709F482135766F00E958EB /* Assets.xcassets in Resources */,
+				E775FB712136A61000DCA9E7 /* NothingFoundCell.xib in Resources */,
 				1B709F462135766E00E958EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B709F432135766E00E958EB /* SearchViewController.swift in Sources */,
+				E7740D46213593AB00A23B9D /* SearchResults.swift in Sources */,
+				E7740D4A2135A53200A23B9D /* SearchResultCell.swift in Sources */,
 				1B709F412135766D00E958EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +303,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79NDL56TAY;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ardita.StoreSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardita.StoreSearchh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,11 +322,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79NDL56TAY;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ardita.StoreSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardita.StoreSearchh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

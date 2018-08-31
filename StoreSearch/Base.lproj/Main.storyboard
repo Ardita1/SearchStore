@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-Wg-TVq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xuz-rA-R1u"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-Iy-bBz">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3zT-uw-gKu"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d3B-Iy-bBz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Zu-X3-oCT"/>
+                            <constraint firstItem="dDE-Wg-TVq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ebz-85-atG"/>
+                            <constraint firstItem="d3B-Iy-bBz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HDB-Oi-LCb"/>
+                            <constraint firstItem="dDE-Wg-TVq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I4g-b3-cCf"/>
+                            <constraint firstItem="dDE-Wg-TVq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WbV-dj-4z9"/>
+                            <constraint firstItem="dDE-Wg-TVq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ecy-n8-vzR"/>
+                            <constraint firstItem="d3B-Iy-bBz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xqx-cm-K0t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="d3B-Iy-bBz" id="zg8-jB-1Jq"/>
+                        <outlet property="tableView" destination="dDE-Wg-TVq" id="9Cj-Xa-015"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
